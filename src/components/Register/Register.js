@@ -25,14 +25,14 @@ const Register = () => {
     }
     if (loading) {
         load = <div>
-            <div class="spinner-grow" role="status">
-                <span class="sr-only">Loading...</span>
+            <div className="spinner-grow" role="status">
+                <span className="sr-only">Loading...</span>
             </div>
-            <div class="spinner-grow" role="status">
-                <span class="sr-only">Loading...</span>
+            <div className="spinner-grow" role="status">
+                <span className="sr-only">Loading...</span>
             </div>
-            <div class="spinner-grow" role="status">
-                <span class="sr-only">Loading...</span>
+            <div className="spinner-grow" role="status">
+                <span className="sr-only">Loading...</span>
             </div>
         </div>
     }

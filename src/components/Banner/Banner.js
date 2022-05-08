@@ -5,10 +5,10 @@ import banner from '../../../src/banners.jpg';
 const Banner = () => {
     const [items, setItems] = useItems();
     return (
-        <div class="">
+        <div className="">
             <img src={banner} alt=''></img>
         </div>
-        
+
     );
 };
 
