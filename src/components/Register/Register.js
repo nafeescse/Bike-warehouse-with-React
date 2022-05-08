@@ -42,14 +42,14 @@ const Register = () => {
     }
 
     return (
-        <div className='login grid grid-cols-1 md:grid-cols-2 border-2 border-rose-700'>
-            <div className=" bg-red-400 flex flex-col justify-center items-center text-white p-10">
+        <div className='login grid grid-cols-1 md:grid-cols-2 border-2 border-black'>
+            <div className=" bg-black flex flex-col justify-center items-center text-white p-10">
                 <h1>Welcome, Back!!</h1>
                 <SocialLogin></SocialLogin>
                 <p className='text-center px-1 my-2'>To keep connected with us please login with your personal info.</p>
 
-                <button onClick={() => { navigate('/login') }} className='bg-white rounded-pill text-red-800 fw-bold px-4 py-1 my-3 flex items-center'>LOGIN
-                    {/* <ChevronDoubleRightIcon className="ms-2 h-5 w-5 text-red-800" /> */}
+                <button onClick={() => { navigate('/login') }} className='bg-white rounded-pill text-black fw-bold px-4 py-1 my-3 flex items-center'>LOGIN
+
                 </button>
 
             </div>
@@ -83,10 +83,10 @@ const Register = () => {
 
                             <small>Already Joined? <Link className='text-decoration-none' to='/login'>Login Now</Link></small>
                         </div>
-                        <Button className='bg-blue-600 text-white px-2 py-1 rounded-lg w-60' onClick={() => {
+                        <Button className=' text-white px-2 py-1 rounded-pill ' onClick={() => {
                             createUserWithEmailAndPassword(email, password)
                         }}
-                            variant="danger" type="submit">
+                            variant="dark" type="submit">
                             Submit
                         </Button>
 

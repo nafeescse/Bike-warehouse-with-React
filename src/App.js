@@ -8,6 +8,10 @@ import Header from './components/Header/Header';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Products from './components/Products/Products';
+import Item from './components/Item/Item';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import ManageItems from './components/ManageItems/ManageItems';
+import Profile from './components/Profile/Profile';
 
 function App() {
 
@@ -17,9 +21,20 @@ function App() {
       <Routes>
         <Route path='/'element={<Home></Home>}></Route>
         <Route path='/blogs'element={<Blogs></Blogs>}></Route>
+        <Route path='/profile'element={<Profile></Profile>}></Route>
         <Route path='/login'element={<Login></Login>}></Route>
         <Route path='/register'element={<Register></Register>}></Route>
-        <Route path='/products'element={<Products></Products>}></Route>
+        <Route path='/additems'element={<Products></Products>}></Route>
+        <Route path='/update/:id' element={
+        <RequireAuth>
+          <Item></Item>
+        </RequireAuth>
+        }></Route>
+        <Route path='/manageitems' element={
+        <RequireAuth>
+          <ManageItems></ManageItems>
+        </RequireAuth>
+        }></Route>
       </Routes>
       
     </div>

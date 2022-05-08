@@ -1,0 +1,56 @@
+[
+    {
+        "name": "DUCATI 899 Panigale",
+        "price": 325000,
+        "quantity": 23,
+        "sold": 85,
+        "supplier": "Firoz Motors",
+        "description": "The Ducati 899 Panigale is replacement for the 848. The bike was introduced globally in 2013 and is closely related to the bigger 1199 Panigale as it shares both looks and the powertrain from the bigger bike. It comes with the new Superquadro engine which is capable of 148hp of power and comes with features like Ducati Quick Shift (DQS), ride-by-wire throttle, triple stage ABS, Ducati Traction Control (DTC) and Engine Brake Control (EBC).",
+        "url": "https://i.ibb.co/ZdJy0W3/richard-ciraulo-o-F3-Rbiki6-HQ-unsplash.jpg"
+    },
+    {
+        "name": "Yamaha R15 Monster",
+        "price": 525000,
+        "quantity": 45,
+        "sold": 55,
+        "supplier": "ACI Motors",
+        "description": "YAMAHA. The Japanese automobile manufacturer’s motto “Revs Your Heart,” is in its truest form in the YZF R15 from the company in Bangladesh. If you are a Bangladeshi biker, or else, a biker from the subcontinent, you must know the meaning very well. YAMAHA has recently updated their R15 bike once again from top to bottom. The 150cc segment bike has its own league in the market with, we can say a cult following. ",
+        "url": "https://i.ibb.co/svWCqYV/conor-luddy-kf4-KHf-Dl-IIg-unsplash.jpg"
+    },
+    {
+        "name": "HONDA CBR 165",
+        "price": 475000,
+        "quantity": 28,
+        "sold": 35,
+        "supplier": "Honda Motors",
+        "description": "The Honda CBR 1000RR is priced from Rs. 16.43 lakh onwards while the MV Agusta Brutale 800 RR is priced from Rs. 20.52 lakh (ex-showroom) onwards. The Honda CBR 1000RR comes with a bigger and more powerful 999 cc engine that churns out 189 BHP and 114 Nm of maximum torque in tandem with offering mileage of 18 Kmpl and getting a six speed gearbox. The MV Agusta Brutale 800 RR gets a 798 cc engine making 140 BHP and 87 Nm of maximum torque. ",
+        "url": "https://i.ibb.co/hBTWnVp/eric-michael-KA9-W4k0p-On4-unsplash.jpg"
+    },
+    {
+        "name": "SUZUKI GSX R150",
+        "price": 390000,
+        "quantity": 53,
+        "sold": 42,
+        "supplier": "Khan Autos",
+        "description": "The Suzuki GSX-R Dual ABS line had defined sport bike performance for over 30 years, with more than a million sold worldwide. So the dedicated Suzuki engineers who have devoted their lives to the GSX-R Dual ABS take their responsibilities very seriously: every GSX-R Dual ABS is designed to be light and the best performing motorcycle in its class, in an unbeatable package. The GSX R 150 comes with a limited edition '100 Years Anniversary' Version priced BDT 395,000. ",
+        "url": "https://i.ibb.co/WW55Y2W/arrul-lin-v7u-SZWVZDn-Y-unsplash.jpg"
+    },
+    {
+        "name": "KTM RC 390",
+        "price": 310000,
+        "quantity": 18,
+        "sold": 25,
+        "supplier": "Kushiara Motors",
+        "description": "KTM RC 390 is a sports bike available at a starting price of Rs. 2,78,138 in India. It is available in only 1 variant and 2 colours. The KTM RC 390 is powered by 373cc BS6 engine which develops a power of 42.9 bhp and a torque of 35 Nm. With both front and rear disc brakes, KTM RC 390 comes up with anti-locking braking system. This RC 390 bike weighs 172 kg and has a fuel tank capacity of 9.5 liters.",
+        "url": "https://i.ibb.co/SPFYWJt/andrew-pons-c-LHPacdtp-SY-unsplash-1.jpg"
+    },
+    {
+        "name": "haojeu",
+        "price": 122000,
+        "quantity": 55,
+        "sold": 75,
+        "supplier": "Golden Motors",
+        "description": "Haojue is one of the largest motorcycle manufacturing brand in China where Haojue KA is their top category standard bike. Haojue KA is powered by 135 cc air cooled, four stroke engine that can generate 8.0 kW max power. The reported top speed of Haojue KA 135 is 100 km per hour.Haojue is a top-quality Chinese brand which is also one of the largest motorcycle manufacturers in China. Its popularity is too good there.",
+        "url": "https://i.ibb.co/Wxtpb8S/download.jpg"
+    }
+]
