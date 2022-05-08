@@ -12,6 +12,8 @@ import Item from './components/Item/Item';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageItems from './components/ManageItems/ManageItems';
 import Profile from './components/Profile/Profile';
+import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
 
@@ -25,6 +27,7 @@ function App() {
         <Route path='/login'element={<Login></Login>}></Route>
         <Route path='/register'element={<Register></Register>}></Route>
         <Route path='/additems'element={<Products></Products>}></Route>
+        <Route path='*'element={<NotFound></NotFound>}></Route>
         <Route path='/update/:id' element={
         <RequireAuth>
           <Item></Item>
@@ -35,7 +38,11 @@ function App() {
           <ManageItems></ManageItems>
         </RequireAuth>
         }></Route>
+        
       </Routes>
+
+      <Footer className="static top-0"></Footer>
+
       
     </div>
   );

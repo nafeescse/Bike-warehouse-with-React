@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Product = (props) => {
     const { name, url, price, quantity, sold, description, supplier, _id } = props.item;
-    
+
     const navigate = useNavigate();
     return (
         <div>
@@ -14,15 +14,15 @@ const Product = (props) => {
                     <Card.Body className='flex flex-col justify-center items-center'>
                         <Card.Title className='text-center'>{name}</Card.Title>
                         <p className='text-center'>
-                            Price: BDT {price} 
+                            Price: BDT {price}
                         </p>
-                        <div className='flex'><p className='text-center'>
+                        <p className='text-center'>
                             Stock: {quantity} Unit
                         </p>
                         <p className='text-center mx-2'>
                             Sold: {sold} Unit
-                        </p></div>
-                        <p>{description.slice(0, 200)}</p>
+                        </p>
+                        <p className='text-justify'>{description.slice(0, 200)}  . . .</p>
                         <Button onClick={() => { navigate(`update/${_id}`) }} variant="dark">Update</Button>
                     </Card.Body>
                 </Card>

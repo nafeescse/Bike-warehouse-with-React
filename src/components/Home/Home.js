@@ -3,6 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import Product from '../Product/Product';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -17,8 +18,8 @@ const Home = () => {
       <Banner></Banner>
       <div className=' w-75 mx-auto'>
 
-       
-        <h2 className='text-center'>Available Products: {items.length}</h2>
+
+        <h2 className='text-center my-10 text-decoration-underline'>Feature Products: {items.length}</h2>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 '>
           {
             items.map(item => <Product key={item._id} item={item}></Product>)
@@ -26,10 +27,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='flex justify-center my-5'><Button className='px-5' onClick={() => { navigate('/manageitems') }}>Manage Items</Button></div>
-
-
-
+      <div className='flex justify-center my-5'>
+        <Button className='px-5' onClick={() => { navigate('/manageitems') }}>Manage Items </Button>
+      </div>
     </div>
   );
 };
