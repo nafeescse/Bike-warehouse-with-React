@@ -33,7 +33,7 @@ const Products = () => {
                 console.log('success', data);
                 alert('items added successfully!!!');
                 event.target.reset();
-                navigate('/');
+                navigate('/home');
 
             })
     }

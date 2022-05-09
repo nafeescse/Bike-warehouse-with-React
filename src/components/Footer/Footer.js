@@ -17,8 +17,8 @@ const Footer = () => {
             </div>
 
             <div className="text-center p-3 bg-black">
-                © 2022 Copyright:
-                <a className="text-white" href="https://mdbootstrap.com/">nafees.unaux.com</a>
+                
+                <a className="text-white text-decoration-none" href="https://nafees.unaux.com/">nafees.unaux.com</a> © 2022
             </div>
         </footer>
     );

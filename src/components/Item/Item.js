@@ -24,7 +24,6 @@ const Item = () => {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-
             },
             body: JSON.stringify(item)
         })
