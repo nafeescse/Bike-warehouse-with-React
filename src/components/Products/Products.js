@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase.init';
 
 const Products = () => {
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
     const handleAddItem = event => {
+
         event.preventDefault();
         const name = event.target.name.value;
         const price = event.target.price.value;
@@ -15,9 +18,9 @@ const Products = () => {
         const supplier = event.target.supplier.value;
         const description = event.target.description.value;
         const username = user.displayName;
-        const item = { name, price, url, quantity, sold, supplier, description , username};
+        const item = { name, price, url, quantity, sold, supplier, description, username };
         console.log(item);
-        fetch('http://localhost:5000/products', {
+        fetch('http://fast-hamlet-93164.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,6 +33,7 @@ const Products = () => {
                 console.log('success', data);
                 alert('items added successfully!!!');
                 event.target.reset();
+                navigate('/');
 
             })
     }
@@ -55,13 +59,13 @@ const Products = () => {
                 <input name='sold' className='border rounded-lg px-2 my-2' type="number" placeholder='Sold Quantity' required />
                 <br />
                 <label >Supplier: </label>
-                <input name='supplier' className='border rounded-lg px-2 my-2' type="text" placeholder='Supplier Name'  />
+                <input name='supplier' className='border rounded-lg px-2 my-2' type="text" placeholder='Supplier Name' />
                 <br />
                 <div className='flex items-center my-2'>
-                <label >Details: </label>
-                <textarea cols={23} name='description' className='border rounded-lg px-2' type="number" placeholder='Item Description' required />
+                    <label >Details: </label>
+                    <textarea cols={23} name='description' className='border rounded-lg px-2' type="number" placeholder='Item Description' required />
                 </div>
-                
+
                 <div className='w-20 my-2 mx-auto'>
                     <input className='bg-black text-white px-2 py-1 rounded-xl' type="submit" value="Add product" />
                 </div>

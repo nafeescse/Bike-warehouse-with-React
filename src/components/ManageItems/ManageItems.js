@@ -14,7 +14,7 @@ const ManageItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure? ');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `http://fast-hamlet-93164.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

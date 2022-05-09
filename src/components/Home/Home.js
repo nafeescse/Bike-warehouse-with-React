@@ -9,9 +9,9 @@ const Home = () => {
   const [items, setItems] = useState([]);
 
   const navigate = useNavigate();
-  
+
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('http://fast-hamlet-93164.herokuapp.com/products')
       .then(res => res.json())
       .then(data => setItems(data))
 
@@ -22,12 +22,12 @@ const Home = () => {
       <Banner></Banner>
       <div className=' w-75 mx-auto'>
         <h2 className='text-center my-10 text-decoration-underline'>Feature Products: {items.length}</h2>
-        {items.length !== 0  ? <div></div> : <div className='flex justify-center'>
-          <Spinner id='spinner' animation="grow" /> 
-          <Spinner id='spinner' animation="grow" /> 
-          <Spinner id='spinner' animation="grow" /> 
-          <Spinner id='spinner' animation="grow" />  
-          <Spinner id='spinner' animation="grow" /> 
+        {items.length !== 0 ? <div></div> : <div className='flex justify-center'>
+          <Spinner id='spinner' animation="grow" />
+          <Spinner id='spinner' animation="grow" />
+          <Spinner id='spinner' animation="grow" />
+          <Spinner id='spinner' animation="grow" />
+          <Spinner id='spinner' animation="grow" />
         </div>
         }
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 '>

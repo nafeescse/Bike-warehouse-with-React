@@ -36,9 +36,9 @@ const Header = () => {
                         
                         {user ?
 
-                            <div className='flex items-center'>
+                            <div className=''>
                                 <Link className='px-2 mx-auto text-decoration-none text-white  ' to="/additems">Add</Link>
-                                <Link className='px-2 mx-auto text-decoration-none text-white ' to="/manageitem">Manage</Link>
+                                <Link className='px-2 mx-auto text-decoration-none text-white ' to="/manageitems">Manage</Link>
                                 <Link className='px-2 mx-auto text-decoration-none text-white ' to="/profile">Profile</Link>
                                 <Button className='text-center text-black px-2 border-0 rounded-xl  bg-white text-decoration-none mx-1 my-1' onClick={logout}>Logout</Button>
                             </div>

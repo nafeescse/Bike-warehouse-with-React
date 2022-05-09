@@ -8,24 +8,23 @@ const Item = () => {
     const navigate = useNavigate();
     const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `http://fast-hamlet-93164.herokuapp.com/products/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
     }, [])
 
+
     const handelDelivered = event => {
         event.preventDefault();
-        let deliverd = item?.quantity - 1;
-        console.log(deliverd);
-        item.quantity = deliverd;
+        const quantity = event.target.quantity.value;
+        const item = { quantity };
         console.log(item);
-        setItem(item);
-        fetch(`http://localhost:5000/products/${id}`, {
-            method: 'POST',
+        fetch(`http://fast-hamlet-93164.herokuapp.com/products/${id}`, {
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json'
+
             },
             body: JSON.stringify(item)
         })
@@ -36,8 +35,32 @@ const Item = () => {
                 event.target.reset();
 
             })
-        // window.location.reload();
     }
+
+
+    // const handelDelivered = event => {
+    //     event.preventDefault();
+    //     let deliverd = item?.quantity - 1;
+    //     console.log(deliverd);
+    //     item.quantity = deliverd;
+    //     console.log(item);
+    //     // setItem(item);
+    //     fetch(`http://fast-hamlet-93164.herokuapp.com/products/${id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(item)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log('success', data);
+    //             alert('kitems Edited Successfully!!!');
+    //             event.target.reset();
+
+    //         })
+    //     // window.location.reload();
+    // }
     return (
         <div className='my-5 text-xl'>
             <h2 className='text-center'>Item Details of : {item.name}</h2>
@@ -57,6 +80,9 @@ const Item = () => {
                     <div className='my-4 flex flex-col w-full sm:w-1/2 mx-auto'>
                         <input className='' type="number" name="quantity" placeholder='Add Stock' />
                         <Button className='bg-blue-600 text-white px-2 py-1 rounded-lg my-2' onClick={handelDelivered}>Restock</Button>
+
+
+                        <input name='quantity' className='border rounded-lg my-2 px-2' type="number" placeholder='Available Quantity' required />
 
                         <Button className='bg-blue-600 text-white px-2 py-1 rounded-lg' onClick={handelDelivered}>Delivered</Button>
                     </div>
