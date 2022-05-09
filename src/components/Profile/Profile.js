@@ -16,9 +16,9 @@ const Profile = () => {
     };
 
     return (
-        <div className='w-100'>
+        <div className='w-100 py-3'>
             <h2 className="text-center">My Profile</h2>
-            <div className='flex flex-col items-center my-5 border border-2 w-50 mx-auto p-2 rounded-lg'>
+            <div className='flex flex-col items-center my-5 border border-2 shadow-xl w-50 mx-auto py-5 rounded-lg'>
                 <img className='rounded-circle' src={user?.photoURL} alt="" />
                 <h2>{user?.displayName}</h2>
                 <h2>{user?.email}</h2>

@@ -26,20 +26,21 @@ const Header = () => {
                 <Navbar.Toggle className='bg-white'aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
-                        className="w-75 mx-auto my-2 my-lg-0 flex items-center"
+                        className="w-100 mx-auto my-2 my-lg-0 flex items-center"
                         navbarScroll
                     >
                         <Link className='px-2 mx-auto text-decoration-none text-white' to="/">Home</Link>
 
                         <Link className='px-2 mx-auto text-decoration-none text-white ' to="/blogs">Blogs</Link>
+                        <Link className='px-2 mx-auto text-decoration-none text-white ' to="/profile">Profile</Link>
                         
                         
                         {user ?
 
                             <div className=''>
                                 <Link className='px-2 mx-auto text-decoration-none text-white  ' to="/additems">Add</Link>
-                                <Link className='px-2 mx-auto text-decoration-none text-white ' to="/manageitems">Manage</Link>
-                                <Link className='px-2 mx-auto text-decoration-none text-white ' to="/profile">Profile</Link>
+                                <Link className='px-2 mx-auto text-decoration-none text-white ' to="/manageitems">Items</Link>
+                                <Link className='px-2 mx-auto text-decoration-none text-white ' to="/myitems">Manage</Link>
                                 <Button className='text-center text-black px-2 border-0 rounded-xl  bg-white text-decoration-none mx-1 my-1' onClick={logout}>Logout</Button>
                             </div>
 

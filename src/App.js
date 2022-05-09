@@ -14,6 +14,7 @@ import ManageItems from './components/ManageItems/ManageItems';
 import Profile from './components/Profile/Profile';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
+import MyItems from './components/MyItems/MyItems';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/'element={<Home></Home>}></Route>
         <Route path='/home'element={<Home></Home>}></Route>
         <Route path='/blogs'element={<Blogs></Blogs>}></Route>
+        <Route path='/myitems'element={<MyItems></MyItems>}></Route>
         <Route path='/profile'element={<Profile></Profile>}></Route>
         <Route path='/login'element={<Login></Login>}></Route>
         <Route path='/register'element={<Register></Register>}></Route>
