@@ -15,6 +15,8 @@ const Home = () => {
 
   }, [])
 
+
+
   return (
     <div classname="overflow-x-hidden">
       <Banner></Banner>
