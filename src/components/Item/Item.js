@@ -17,13 +17,17 @@ const Item = () => {
 
     const handelDelivered = event => {
         event.preventDefault();
+
         const quantity = event.target.quantity.value;
+
         const item = { quantity };
+
         console.log(item);
         fetch(`http://fast-hamlet-93164.herokuapp.com/products/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
+                
             },
             body: JSON.stringify(item)
         })
