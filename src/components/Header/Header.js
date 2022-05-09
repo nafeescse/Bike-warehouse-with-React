@@ -37,10 +37,10 @@ const Header = () => {
                         {user ?
 
                             <div className='flex items-center'>
-                                <Link className='px-2 mx-auto text-decoration-none text-white  ' to="/additems">AddItems</Link>
-                                <Link className='px-2 mx-auto text-decoration-none text-white ' to="/myitems">MyItems</Link>
+                                <Link className='px-2 mx-auto text-decoration-none text-white  ' to="/additems">Add</Link>
+                                <Link className='px-2 mx-auto text-decoration-none text-white ' to="/manageitem">Manage</Link>
                                 <Link className='px-2 mx-auto text-decoration-none text-white ' to="/profile">Profile</Link>
-                                <p onClick={logout} className='cursor-pointer text-center text-white px-2 py-1  border-0 rounded-lg bg-primary my-auto' src={user.displayName} alt="" >Logout</p>
+                                <Button className='text-center text-black px-2 border-0 rounded-xl  bg-white text-decoration-none mx-1 my-1' onClick={logout}>Logout</Button>
                             </div>
 
                             : <div className='px-2 my-2 mx-auto text-decoration-none text-white  flex items-center'><Link className='text-center text-black px-2 border-0 rounded-xl  bg-white text-decoration-none mx-1 my-1' to="/login">Login</Link>

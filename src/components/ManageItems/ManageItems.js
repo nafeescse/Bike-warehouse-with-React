@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Container, Table } from 'react-bootstrap';
+import { Button, Container, Spinner, Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase.init';
 import useItems from '../../hooks/useItems';
 // import { useTable } from 'react-table'
@@ -9,8 +10,6 @@ import useItems from '../../hooks/useItems';
 const ManageItems = () => {
 
     const [items, setItems] = useItems();
-    const [user, loading, error] = useAuthState(auth);
-    console.log(user);
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure? ');
@@ -28,39 +27,46 @@ const ManageItems = () => {
     }
 
     return (
-        <div >
-            <p className='text-center' >Manage All Items</p>
+        <div className='w-full lg:w-3/4 mx-auto'>
+            <p className='text-center fs-3 text-decoration-underline my-3' >Manage All Items</p>
 
-            
-                <Table responsive bordered hover className='w-5/6 mx-auto  border border-2 border-blue-600'>
-                    <thead className='border border-2 border-blue-600'>
-                        <tr>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Supplier</th>
-                            <th>Stock</th>
-                            <th>Sold</th>
-                            <th>Delete</th>
-                            {/* <th>Username</th> */}
-                        </tr>
-                    </thead>
-                    <tbody >
-                        {
-                            items.map(item =>
-                                <tr className='border border-blue-600'>
-                                    <td className='text-center'>{item.name}</td>
-                                    <td className='text-center'>{item.price}</td>
-                                    <td className='text-center'>{item.supplier}</td>
-                                    <td className='text-center'>{item.quantity}</td>
-                                    <td className='text-center'>{item.sold}</td>
-                                    <td className='text-center'> <Button onClick={() => {
-                                        handleDelete(item._id)
-                                    }} className='border border-red-800 bg-red-600 text-white rounded-md px-2 my-1'>Delete</Button> </td>
-                                </tr>)
-                        }
-                    </tbody>
-                </Table>
-            
+            {items.length !== 0 ? <div></div> : <div className='flex justify-center my-20'>
+                <Spinner id='spinner' animation="grow" />
+                <Spinner id='spinner' animation="grow" />
+                <Spinner id='spinner' animation="grow" />
+                <Spinner id='spinner' animation="grow" />
+                <Spinner id='spinner' animation="grow" />
+            </div>
+            }
+            <Table responsive bordered hover className='border border-lg'>
+                <thead className=''>
+                    <tr>
+                        <th className='text-center'>Name</th>
+                        <th className='text-center'>Price</th>
+                        <th className='text-center'>Supplier</th>
+                        <th className='text-center'>Stock</th>
+                        {/* <th className='text-center'>Sold</th> */}
+                        <th className='text-center'>Delete</th>
+                        {/* <th>Username</th> */}
+                    </tr>
+                </thead>
+                <tbody >
+                    {
+                        items.map(item =>
+                            <tr className='border border-blue-600'>
+                                <td className='text-center'>{item.name}</td>
+                                <td className='text-center'>{item.price}</td>
+                                <td className='text-center'>{item.supplier}</td>
+                                <td className='text-center'>{item.quantity}</td>
+                                {/* <td className='text-center'>{item.sold}</td> */}
+                                <td className='text-center'> <Button onClick={() => {
+                                    handleDelete(item._id)
+                                }} className='border bg-danger rounded-lg px-2 my-1'>Delete</Button> </td>
+                            </tr>)
+                    }
+                </tbody>
+            </Table>
+
         </div>
     );
 };

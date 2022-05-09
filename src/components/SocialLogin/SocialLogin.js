@@ -8,8 +8,7 @@ const SocialLogin = () => {
         const navigate = useNavigate();
         let errorMsg;
         let load;
-        let loadGit;
-        let errorMsg1;
+
         const location = useLocation();
         let from = location.state?.from?.pathname || "/";
 
