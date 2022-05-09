@@ -47,9 +47,9 @@ const Home = () => {
       <div className='flex flex-col items-center justify-center pb-10 mx-2'>
         <p className='text-center  fw-bold fs-3  '>Youtube Videos</p>
         <div className='grid grid-cols-1 xl:grid-cols-2'>
-        <iframe className='p-3'  width="400" height="315" src="https://www.youtube.com/embed/XiAqmlIEFi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className='p-3'  width="390" height="315" src="https://www.youtube.com/embed/XiAqmlIEFi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <iframe className='p-3' width="400" height="315" src="https://www.youtube.com/embed/zyBh1-1bSBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className='p-3' width="390" height="315" src="https://www.youtube.com/embed/zyBh1-1bSBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
       {user? <Profile></Profile> : <div></div>}
