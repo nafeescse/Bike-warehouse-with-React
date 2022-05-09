@@ -9,8 +9,6 @@ import useItems from '../../hooks/useItems';
 const Profile = () => {
     const [items, setItems] = useItems();
     const [user] = useAuthState(auth);
-    console.log(user?.photoURL);
-    console.log(user);
     const logout = () => {
         signOut(auth);
     };
