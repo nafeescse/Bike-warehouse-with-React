@@ -8,7 +8,7 @@ const Item = () => {
     const navigate = useNavigate();
     const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `http://fast-hamlet-93164.herokuapp.com/products/${id}`;
+        const url = `https://fast-hamlet-93164.herokuapp.com/products/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
@@ -23,11 +23,11 @@ const Item = () => {
         const item = { quantity };
 
         console.log(item);
-        fetch(`http://fast-hamlet-93164.herokuapp.com/products/${id}`, {
+        fetch(`https://fast-hamlet-93164.herokuapp.com/products/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                
+
             },
             body: JSON.stringify(item)
         })
@@ -48,7 +48,7 @@ const Item = () => {
     //     item.quantity = deliverd;
     //     console.log(item);
     //     // setItem(item);
-    //     fetch(`http://fast-hamlet-93164.herokuapp.com/products/${id}`, {
+    //     fetch(`https://fast-hamlet-93164.herokuapp.com/products/${id}`, {
     //         method: 'PUT',
     //         headers: {
     //             'Content-Type': 'application/json',
