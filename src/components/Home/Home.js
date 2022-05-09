@@ -5,9 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import Product from '../Product/Product';
 import Footer from '../Footer/Footer';
+import Profile from '../Profile/Profile';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../firebase.init';
 
 const Home = () => {
   const [items, setItems] = useState([]);
+  const [user] = useAuthState(auth);
   const navigate = useNavigate();
   useEffect(() => {
     fetch('https://fast-hamlet-93164.herokuapp.com/products')
@@ -48,6 +52,8 @@ const Home = () => {
         <iframe className='p-3' width="500" height="315" src="https://www.youtube.com/embed/zyBh1-1bSBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
+      {user? <Profile></Profile> : <div></div>}
+
     </div>
   );
 };
