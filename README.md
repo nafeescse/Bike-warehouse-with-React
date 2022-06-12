@@ -1,6 +1,6 @@
 # BikeXpress
 
-This project is a warehouse management website [Live site link]([https://github.com/facebook/create-react-app](https://wireehouse.web.app/)).
+This project is a warehouse management website [Live site link](https://wireehouse.web.app/).
 
 ## Features & Functionality:
 
